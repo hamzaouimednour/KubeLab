@@ -8,7 +8,6 @@ KubeLab is a hands-on home lab built to master **Linux system administration**, 
 - **Kubernetes**: Deploy and manage a k3s cluster for container orchestration.
 - **Networking**: Experiment with static IPs, routing, and service exposure.
 - **DevOps**: Implement GitOps with Argo CD, monitor with Prometheus/Grafana, and deploy a Java app.
-- **Showcase**: Create a recruiter-friendly repository with clear documentation, automation scripts, and screenshots.
 
 ## Hardware
 - **Node 1**: HP EliteDesk 800 G2 Mini
