@@ -1,4 +1,4 @@
-# KubeLab: A Home Lab for Linux, Kubernetes, and DevOps Practice
+# KubeLab: A Kubernetes cluster home lab
 
 ## Overview
 KubeLab is a hands-on home lab built to master **Linux system administration**, **Kubernetes orchestration**, **networking**, and **DevOps practices**. It runs on two compact HP mini PCs, leveraging **k3s** (lightweight Kubernetes), **Grafana** for visualization, **Prometheus** for monitoring, **Argo CD** for GitOps, and a **small Java application** to simulate real-world workloads. This project demonstrates skills in containerization, CI/CD, monitoring, and infrastructure automation, with a focus on scalability and learning.
