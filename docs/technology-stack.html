@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KubeLab Technology Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .category-section { margin-bottom: 2rem; }
+        .tech-card { transition: transform 0.2s; }
+        .tech-card:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6 text-center">KubeLab Technology Stack</h1>
+        <p class="text-lg mb-8 text-center">Technologies powering <strong>KubeLab</strong>, a home lab for mastering <strong>DevOps</strong>, <strong>Kubernetes</strong>, <strong>Linux</strong>, and <strong>networking</strong>, supporting a <strong>GitLab CI/CD pipeline</strong>.</p>
+
+        <!-- Orchestration -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Orchestration</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/kubernetes/kubernetes-plain.svg" alt="k3s" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">k3s</h3>
+                    <p class="text-gray-600">Lightweight Kubernetes for running workloads on resource-constrained nodes. Hosts Argo CD, Vault, Cert-Manager.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CI/CD -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">CI/CD</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/gitlab/gitlab-original.svg" alt="GitLab" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">GitLab CE</h3>
+                    <p class="text-gray-600">Self-hosted CI/CD platform for building, testing, and deploying Java/Angular apps.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Application</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/java/java-original.svg" alt="Java" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Java</h3>
+                    <p class="text-gray-600">Backend runtime for application logic, integrated with CI/CD pipeline.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/angularjs/angularjs-original.svg" alt="Angular" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Angular</h3>
+                    <p class="text-gray-600">Frontend framework for building responsive web applications.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Streaming -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Streaming</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/apachekafka/apachekafka-original.svg" alt="Kafka" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Kafka</h3>
+                    <p class="text-gray-600">Distributed streaming platform for event-driven data pipelines.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Databases</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">MongoDB</h3>
+                    <p class="text-gray-600">NoSQL database for flexible, scalable data storage.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">PostgreSQL</h3>
+                    <p class="text-gray-600">Relational database for structured data and application persistence.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/elasticsearch/elasticsearch-original.svg" alt="Elasticsearch" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Elasticsearch</h3>
+                    <p class="text-gray-600">Search and analytics engine for log and data indexing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Networking -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Networking</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/nginx/nginx-original.svg" alt="Nginx" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Nginx</h3>
+                    <p class="text-gray-600">Web server and reverse proxy for serving apps and load balancing.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/traefikproxy/traefikproxy-original.svg" alt="Traefik" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Traefik</h3>
+                    <p class="text-gray-600">Cloud-native reverse proxy for dynamic routing in Kubernetes.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://opnsense.org/wp-content/uploads/opnsense-logo.png" alt="OPNsense" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">OPNsense</h3>
+                    <p class="text-gray-600">Open-source router/firewall for VLANs and network security.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/cilium/cilium-original.svg" alt="Cilium" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Cilium</h3>
+                    <p class="text-gray-600">Networking and security for Kubernetes with eBPF.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitOps -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">GitOps</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/argocd/argocd-original.svg" alt="Argo CD" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Argo CD</h3>
+                    <p class="text-gray-600">GitOps tool for continuous deployment to k3s.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monitoring -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Monitoring</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/prometheus/prometheus-original.svg" alt="Prometheus" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Prometheus</h3>
+                    <p class="text-gray-600">Monitoring system for collecting and querying metrics.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/grafana/grafana-original.svg" alt="Grafana" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Grafana</h3>
+                    <p class="text-gray-600">Visualization platform for monitoring dashboards.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/kibana/kibana-original.svg" alt="Kibana" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Kibana</h3>
+                    <p class="text-gray-600">Log and data visualization tool, paired with Elasticsearch.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Security</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/vault/vault-original.svg" alt="Vault" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Vault</h3>
+                    <p class="text-gray-600">Secrets management for secure storage of credentials.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/certmanager/certmanager-original.svg" alt="Cert-Manager" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Cert-Manager</h3>
+                    <p class="text-gray-600">Automated certificate management for Kubernetes TLS.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artifact Management -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Artifact Management</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/jfrog/jfrog-original.svg" alt="Artifactory" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Artifactory</h3>
+                    <p class="text-gray-600">Artifact repository for storing CI/CD build outputs.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Automation -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Automation</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/ansible/ansible-original.svg" alt="Ansible" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Ansible</h3>
+                    <p class="text-gray-600">Automation tool for node configuration and provisioning.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Infrastructure</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/terraform/terraform-original.svg" alt="Terraform" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Terraform</h3>
+                    <p class="text-gray-600">Infrastructure-as-code tool for managing lab resources.</p>
+                </div>
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/helm/helm-original.svg" alt="Helm" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Helm</h3>
+                    <p class="text-gray-600">Package manager for deploying applications to k3s.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operating System -->
+        <div class="category-section">
+            <h2 class="text-2xl font-semibold mb-4">Operating System</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="tech-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/linux/linux-original.svg" alt="Linux" class="w-8 h-8 mb-2">
+                    <h3 class="text-xl font-bold">Linux</h3>
+                    <p class="text-gray-600">Operating system (Ubuntu) for nodes, hosting all services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
