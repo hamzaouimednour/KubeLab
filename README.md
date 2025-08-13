@@ -1,7 +1,7 @@
 # KubeLab: A Kubernetes cluster homelab
 
 ## Overview
-KubeLab is a hands-on home lab built to master **Linux system administration**, **Kubernetes orchestration**, **networking**, and **DevOps practices**.
+**KubeLab** is a hands-on home lab built to master **Linux system administration**, **Kubernetes orchestration**, **networking**, and **DevOps practices**.
 
 It's a place to try out new tools, experiment with GitOps, automate deployments and configs, and test things like backup strategies, security, and scaling. The idea overall is to build something close to a real production environment but with the flexibility to learn, break things and continuously improve.
 
@@ -60,11 +60,10 @@ The following table outlines the technology stack for **KubeLab**:
 This diagram gives a clear view of my home lab's cluster setup, visually mapping how the components connected and how everything works together to build a production-like environment:
 ![Lab Diagram](docs/diagrams/lab-diagram.png)
 
-<!-- ## Repository Structure
+## Repository Structure
 - `docs/`: Documentation
   - `networking.md`: Networking setup
- -->
-
+- `networking/`: Networking walkthroughs, configurations, and scripts.
 
 
 ## Contact
