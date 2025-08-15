@@ -5,13 +5,13 @@
 
 It's a place to try out new tools, experiment with GitOps, automate deployments and configs, and test things like backup strategies, security, and scaling. The idea overall is to build something close to a real production environment but with the flexibility to learn, break things and continuously improve.
 
-## Project Goals
-- **Linux**: Deepen expertise in server administration, troubleshooting, and system configuration.
-- **Kubernetes**: Deploy and manage a k3s cluster for container orchestration.
-- **Networking**: Experiment with static IPs, routing, and service exposure to simulate production-like network layers..
-- **DevOps**: Practice GitOps, monitor with Prometheus/Grafana, and manage CI/CD pipelines.
-- **Self-Hosting**: Host my own services and applications to explore deployment strategies, security, and scalability in real-world scenarios.
-
+## Index
+- [Documentation for the lab](docs/) 
+  - [Networking setup](docs/networking.md)
+  - [Lab setup](docs/setup-guide.md)
+- [Infrastructure configuration and automation](infrastructure/)
+  - [Ansible playbooks for automating the lab setup](infrastructure/ansible/)
+  - [Networking walkthroughs, configs, and backups](infrastructure/networking/)
 
 ## Hardware
 The lab's built from a mix of refurbished HP mini PCs (pretty cheap but they perform surprisingly well), upgraded with DDR4 RAMs and NVMe SSDs for smoother performance, plus a custom router and a managed switch to tie it all together:
@@ -24,6 +24,7 @@ The lab's built from a mix of refurbished HP mini PCs (pretty cheap but they per
 - **Switch**: TL-SG108E (8-port Gigabit semi-managed switch)
 - **UPS**: Tecnoware ERA Plus 750 (750VA/525W) protects nodes/switch/router from blackouts which gives 10-15 minutes of backup
 
+![Lab Hardware](/screenshots/hardware/lab_hardware.jpg)
 
 ## Technology Stack
 
@@ -59,11 +60,6 @@ The following table outlines the technology stack for **KubeLab**:
 ## Cluster Infrastructure
 This diagram gives a clear view of my home lab's cluster setup, visually mapping how the components connected and how everything works together to build a production-like environment:
 ![Lab Diagram](docs/diagrams/lab-diagram.png)
-
-## Repository Structure
-- `docs/`: Documentation
-  - `networking.md`: Networking setup
-- `networking/`: Networking walkthroughs, configurations, and scripts.
 
 
 ## Contact
