@@ -1,0 +1,56 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache & upgrade
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install baseline packages
+      apt:
+        name: "{{ common_packages }}"
+        state: present
+
+    - name: Disable swap (no-fail if already off)
+      command: swapoff -a
+      register: swapoff_out
+      failed_when: false
+      changed_when: swapoff_out.rc == 0
+
+    - name: Ensure swap is removed from fstab
+      replace:
+        path: /etc/fstab
+        regexp: '^\s*([^#]\S+)\s+none\s+swap\s+.*$'
+        replace: '# \1 none swap sw 0 0'
+
+    - name: Ensure br_netfilter is enabled
+      copy:
+        dest: /etc/modules-load.d/k8s.conf
+        content: |
+          br_netfilter
+      notify: reload-modules
+
+    - name: Set sysctl for Kubernetes networking
+      copy:
+        dest: /etc/sysctl.d/99-kubernetes.conf
+        content: |
+          net.bridge.bridge-nf-call-iptables = 1
+          net.bridge.bridge-nf-call-ip6tables = 1
+          net.ipv4.ip_forward = 1
+      notify: sysctl-reload
+
+    - name: Ensure chrony (time sync)
+      apt:
+        name: chrony
+        state: present
+    - name: Enable & start chrony
+      service:
+        name: chrony
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: reload-modules
+      command: modprobe br_netfilter
+    - name: sysctl-reload
+      command: sysctl --system

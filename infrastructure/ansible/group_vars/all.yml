@@ -1,0 +1,22 @@
+common_packages:
+  - curl
+  - git
+  - vim
+  - htop
+  - net-tools
+  - iputils-ping
+  - unzip
+  - ca-certificates
+
+disable_services:
+  - ufw
+  - apparmor 
+
+k3s_version: "" # version or empty for latest
+k3s_server_args: >
+  --disable traefik=false
+  --write-kubeconfig-mode 644
+  --flannel-backend none   # since i use Cilium
+k3s_agent_args: ""
+
+k3s_url: "https://{{ hostvars['k3s-master'].ansible_host }}:6443"

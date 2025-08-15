@@ -1,0 +1,35 @@
+# k3s-install.yml
+# Install master + join workers, logging only master IP and token
+
+- hosts: master
+  become: yes
+  tasks:
+    - name: Install K3s master
+      shell: curl -sfL https://get.k3s.io | sh -s - server
+
+    - name: Get K3s join token
+      slurp:
+        src: /var/lib/rancher/k3s/server/node-token
+      register: k3s_token_raw
+
+    - name: Save and log K3s token
+      set_fact:
+        k3s_token: "{{ k3s_token_raw.content | b64decode | trim }}"
+    - debug:
+        msg: "K3s token: {{ k3s_token }}"
+
+- hosts: workers
+  become: yes
+  vars:
+    master_ip: "{{ hostvars[groups['master'][0]].ansible_host | default(groups['master'][0]) }}"
+    k3s_token: "{{ hostvars[groups['master'][0]].k3s_token }}"
+  tasks:
+    - debug:
+        msg: "Joining master {{ master_ip }} with token {{ k3s_token }}"
+
+    - name: Install K3s worker
+      shell: |
+        curl -sfL https://get.k3s.io | \
+        K3S_URL="https://{{ master_ip }}:6443" \
+        K3S_TOKEN="{{ k3s_token }}" \
+        sh -
